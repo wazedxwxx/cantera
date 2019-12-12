@@ -13,8 +13,8 @@ steps:
 - script: sudo apt install g++ scons libboost-dev cython python3 python3-dev python3-setuptools python3-numpy python3-pip
   displayName: 'Install apt dependencies'
 
-- script: python -m pip install ruamel.yaml
+- script: python3 -m pip install ruamel.yaml
   displayName: 'Run a multi-line script'
 
-- script: scons build
+- script: scons build python_cmd=/usr/bin/python3
   displayName: 'Build Cantera'
